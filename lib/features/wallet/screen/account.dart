@@ -1,7 +1,5 @@
 import 'package:e_wallet/common/common_color.dart';
-import 'package:e_wallet/features/home/widget/card.dart';
 import 'package:e_wallet/features/wallet/screen/CustomAccountCard.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AccountTab extends StatefulWidget {
@@ -16,7 +14,7 @@ class _AccountTabState extends State<AccountTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CommonColor().backgorund1,
-      body: Center(
+      body: const Center(
         child: Column(
           children: [
             SizedBox(

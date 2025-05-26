@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen>
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.sizeOf(context).height,
                 width: MediaQuery.sizeOf(context).width,
                 child: Stack(
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen>
                         right: 80,
                         child: AnimatedRotation(
                           turns: _animation.value,
-                          duration: Duration(milliseconds: 0),
+                          duration: const Duration(milliseconds: 0),
                           child: Image.asset(
                             "assets/images/Balance.png",
                             scale: 0.8,
@@ -220,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen>
                               BorderRadius.circular(10), // Add a border radius
                         ),
                         child: ListView.builder(
-                          physics: RangeMaintainingScrollPhysics(),
+                          physics: const RangeMaintainingScrollPhysics(),
                           itemCount: list.length,
                           itemBuilder: (context, index) {
                             var data = list[index];
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen>
                                     onPressed: () {
                                       GoRouter.of(context).pop();
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       "View Deatils",
                                       style: TextStyle(
                                           fontSize: 16,
@@ -242,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen>
                                     onPressed: () {
                                       GoRouter.of(context).pop();
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       "Back",
                                       style: TextStyle(
                                           fontSize: 16,

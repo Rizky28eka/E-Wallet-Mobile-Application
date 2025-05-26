@@ -36,7 +36,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                 "assets/images/icons/Arrow - Left 2.png",
                 scale: 0.8,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 120,
               ),
               const Text(
@@ -57,10 +57,10 @@ class _StatisticsScreenState extends State<StatisticsScreen>
             floating: true,
             expandedHeight: 130.0,
             bottom: TabBar(
-              unselectedLabelStyle: TextStyle(),
-              padding: EdgeInsets.only(left: 10, right: 10),
+              unselectedLabelStyle: const TextStyle(),
+              padding: const EdgeInsets.only(left: 10, right: 10),
               dividerHeight: 0,
-              indicatorPadding: EdgeInsets.all(10),
+              indicatorPadding: const EdgeInsets.all(10),
               tabAlignment: TabAlignment.fill,
               indicatorSize: TabBarIndicatorSize.tab,
               labelStyle: CommonTextStyle().style1,
@@ -71,17 +71,17 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                 gradient: LinearGradient(
                     colors: [CommonColor().backgorund1, CommonColor().shine]),
               ),
-              tabs: [
-                const Tab(text: 'Week'),
-                const Tab(text: 'Month'),
-                const Tab(text: 'Year'),
+              tabs: const [
+                Tab(text: 'Week'),
+                Tab(text: 'Month'),
+                Tab(text: 'Year'),
               ],
               controller: controller,
             )),
         SliverFillRemaining(
           child: TabBarView(
             controller: controller,
-            children: <Widget>[WeekTab(), MonthTab(), YearTab()],
+            children: const <Widget>[WeekTab(), MonthTab(), YearTab()],
           ),
         ),
       ]),

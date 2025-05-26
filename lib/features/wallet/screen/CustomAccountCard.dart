@@ -27,35 +27,35 @@ class _CustomAccountCardState extends State<CustomAccountCard> {
       width: 400,
       decoration: BoxDecoration(
           color: CommonColor().backgorund1,
-          border: Border.all(color: Color(0xFF19173D)),
+          border: Border.all(color: const Color(0xFF19173D)),
           borderRadius: BorderRadius.circular(60)),
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           // Image.asset(widget.image),
           CircleAvatar(
             backgroundImage: AssetImage(widget.image),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Spacer(),
+              const Spacer(),
               Text(
                 widget.name,
                 style: CommonTextStyle().style1,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
-              Spacer()
+              const Spacer()
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             height: 44,
             width: 90,
@@ -70,8 +70,8 @@ class _CustomAccountCardState extends State<CustomAccountCard> {
                 color: CommonColor().backgorund1),
             child: Center(
               child: CupertinoSwitch(
-                activeColor: CommonColor().shine,
-                trackColor: CommonColor().background2,
+                activeTrackColor: CommonColor().shine,
+                inactiveTrackColor: CommonColor().background2,
                 value: widget.value,
                 onChanged: (value) {
                   setState(() {
@@ -81,7 +81,7 @@ class _CustomAccountCardState extends State<CustomAccountCard> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 15,
           )
         ],

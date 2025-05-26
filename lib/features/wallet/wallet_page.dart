@@ -62,16 +62,16 @@ class _WalletScreenState extends State<WalletScreen>
               indicatorColor: CommonColor().shine,
               indicatorSize: TabBarIndicatorSize.tab,
               labelStyle: CommonTextStyle().style1,
-              tabs: [
+              tabs: const [
                 Tab(text: 'Cards'),
-                const Tab(text: 'Account'),
+                Tab(text: 'Account'),
               ],
               controller: controller,
             )),
         SliverFillRemaining(
           child: TabBarView(
             controller: controller,
-            children: <Widget>[CardTab(), AccountTab()],
+            children: const <Widget>[CardTab(), AccountTab()],
           ),
         ),
       ]),

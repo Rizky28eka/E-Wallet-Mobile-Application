@@ -1,7 +1,6 @@
 import 'package:e_wallet/common/common_color.dart';
 import 'package:e_wallet/common/common_textstyle.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class YearTab extends StatefulWidget {
   const YearTab({super.key});
@@ -80,9 +79,9 @@ class _YearTabState extends State<YearTab> with SingleTickerProviderStateMixin {
                       indicatorColor: CommonColor().shine,
                       indicatorSize: TabBarIndicatorSize.tab,
                       labelStyle: CommonTextStyle().style1,
-                      tabs: [
+                      tabs: const [
                         Tab(text: 'Income'),
-                        const Tab(text: 'Outcome'),
+                        Tab(text: 'Outcome'),
                       ],
                       controller: controller,
                     ),
@@ -90,7 +89,7 @@ class _YearTabState extends State<YearTab> with SingleTickerProviderStateMixin {
               SliverFillRemaining(
                 child: TabBarView(
                   controller: controller,
-                  children: [Income(), Outcome()],
+                  children: const [Income(), Outcome()],
                 ),
               ),
             ]),
@@ -111,16 +110,16 @@ class _IncomeState extends State<Income> {
   List<String> days = ['Mon', 'Tue', 'Wen', 'Thus', "Fri", 'Sat', 'Sun'];
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.sizeOf(context).height,
       width: MediaQuery.sizeOf(context).width,
       child: Stack(
         children: [
-          Positioned(
+          const Positioned(
             top: 10,
             left: 20,
             child: Padding(
-              padding: const EdgeInsets.only(right: 300, top: 10),
+              padding: EdgeInsets.only(right: 300, top: 10),
               child: Text(
                 "Overview",
                 style: TextStyle(
@@ -147,7 +146,7 @@ class _IncomeState extends State<Income> {
               height: 30,
               width: 400,
               child: ListView.builder(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
                 scrollDirection: Axis.horizontal,
@@ -163,7 +162,7 @@ class _IncomeState extends State<Income> {
                         });
                       },
                       child: AnimatedContainer(
-                        duration: Duration(
+                        duration: const Duration(
                           milliseconds: 350,
                         ),
                         child: Text(
@@ -174,7 +173,7 @@ class _IncomeState extends State<Income> {
                               fontStyle: FontStyle.normal,
                               color: index == selected
                                   ? CommonColor().shine
-                                  : Color(0xFF7B78AA)),
+                                  : const Color(0xFF7B78AA)),
                         ),
                       ),
                     ),
@@ -201,16 +200,16 @@ class _OutcomeState extends State<Outcome> {
   List<String> days = ['Mon', 'Tue', 'Wen', 'Thus', "Fri", 'Sat', 'Sun'];
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.sizeOf(context).height,
       width: MediaQuery.sizeOf(context).width,
       child: Stack(
         children: [
-          Positioned(
+          const Positioned(
             top: 10,
             left: 20,
             child: Padding(
-              padding: const EdgeInsets.only(right: 300, top: 10),
+              padding: EdgeInsets.only(right: 300, top: 10),
               child: Text(
                 "Overview",
                 style: TextStyle(
@@ -237,7 +236,7 @@ class _OutcomeState extends State<Outcome> {
               height: 30,
               width: 400,
               child: ListView.builder(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
                 scrollDirection: Axis.horizontal,
@@ -253,7 +252,7 @@ class _OutcomeState extends State<Outcome> {
                         });
                       },
                       child: AnimatedContainer(
-                        duration: Duration(
+                        duration: const Duration(
                           milliseconds: 350,
                         ),
                         child: Text(
@@ -264,7 +263,7 @@ class _OutcomeState extends State<Outcome> {
                               fontStyle: FontStyle.normal,
                               color: index == selected
                                   ? CommonColor().shine
-                                  : Color(0xFF7B78AA)),
+                                  : const Color(0xFF7B78AA)),
                         ),
                       ),
                     ),

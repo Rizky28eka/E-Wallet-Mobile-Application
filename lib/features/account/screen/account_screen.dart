@@ -11,7 +11,7 @@ class AccountScreen extends StatelessWidget {
         backgroundColor: CommonColor().backgorund1,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Row(
@@ -23,7 +23,7 @@ class AccountScreen extends StatelessWidget {
                   "assets/images/icons/Arrow - Left 2.png",
                   scale: 0.8,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 120,
                 ),
                 const Text(
@@ -40,7 +40,7 @@ class AccountScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Container(
@@ -56,10 +56,10 @@ class AccountScreen extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               "Dya Druston",
               style: TextStyle(
                   fontSize: 23,
@@ -67,8 +67,8 @@ class AccountScreen extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: Colors.white),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 150, top: 10),
+            const Padding(
+              padding: EdgeInsets.only(left: 150, top: 10),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -92,22 +92,22 @@ class AccountScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
-            CustomAccountCard(
+            const CustomAccountCard(
                 image: "assets/images/girl_profile.jpeg",
                 name: "Dya Druston",
                 value: true),
-            CustomAccountCard(
+            const CustomAccountCard(
                 image: "assets/images/Ellipse 249.png",
                 name: "Sandy Chungus",
                 value: false),
-            CustomAccountCard(
+            const CustomAccountCard(
                 image: "assets/images/actress1.jpeg",
                 name: "Gautam Yadav",
                 value: false),
-            CustomAccountCard(
+            const CustomAccountCard(
                 image:
                     "assets/images/WhatsApp Image 2023-10-16 at 9.47.48 PM.jpeg",
                 name: "Aditya Chauhan",
