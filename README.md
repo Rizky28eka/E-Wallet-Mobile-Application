@@ -1,9 +1,5 @@
 # E-Wallet Mobile Application
 
-## Five-word Summary
-
-Modern Digital Wallet Payment Solution
-
 ## Project Overview
 
 A sleek and modern mobile wallet application built with Flutter, designed to provide users with a seamless digital payment experience. The application features a dark theme UI with smooth animations and intuitive navigation.
